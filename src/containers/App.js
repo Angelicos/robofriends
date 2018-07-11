@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CardList from '../components/CardList';
 import Scroll from '../components/Scroll';
-import ErrorBoundry from '../components/ErrorBoundry';
 import {robots} from '../robots.js';
 import './App.css';
 
@@ -41,9 +40,7 @@ class App extends Component {
 				<div className='tc'>
 					<Header searchChange={this.onSearchChange} searchField={this.state.searchField} />
 					<Scroll>
-						<ErrorBoundry>
-							<CardList robots={filteredRobots} />
-						</ErrorBoundry>
+						<CardList robots={filteredRobots} />
 					</Scroll>
 					<Footer />
 				</div>
